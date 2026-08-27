@@ -10,7 +10,7 @@ export function ScaleFigure({ m, n }: { m: number; n: number }) {
 
   return (
     <FigureFrame
-      n="3"
+      n="2"
       caption={
         <>
           Finished exponential scales for the selected ranks.{" "}

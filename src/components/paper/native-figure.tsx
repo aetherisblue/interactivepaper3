@@ -1,4 +1,4 @@
-import { FOREIGN_BASES, logBase, meeting, pretty, prettyStep } from "@/lib/matrix";
+import { FOREIGN_BASES, logBase, meeting, pretty, prettyStep, scale } from "@/lib/matrix";
 import { HoverNote } from "@/components/ui/tooltip";
 import { FigureFrame } from "./figure-frame";
 import { Tex } from "./tex";
@@ -47,11 +47,12 @@ export function NativeFigure({ m, n }: { m: number; n: number }) {
             <PoolCard label={`R(${n},${m})`} value={pretty(inv)} tone="minus" />
           </div>
           <p className="font-sans text-sm leading-relaxed text-muted">
-            Product{" "}
-            <span className="text-ink tabular-nums">
-              {pretty(r)} × {pretty(inv)} = {pretty(r * inv)}
-            </span>
-            . Conservation, not a step: the meeting returns to 1.
+            Rank {m} coordinates:{" "}
+            <Tex i>{`${m}^{${m}}=${pretty(scale(m))}`}</Tex>
+            {", "}
+            <Tex i>{`\\dfrac{1}{${m}^{${m}}}=${pretty(1 / scale(m))}`}</Tex>
+            . The meeting is their ratio against the rank-{n} scale, not a
+            jump from the diagonal 1.
           </p>
         </div>
         <div className="flex flex-col gap-4 p-4 sm:p-5">

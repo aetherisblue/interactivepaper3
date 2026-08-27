@@ -88,10 +88,7 @@ export function PaperShell() {
             <footer className="mt-16 border-t border-rule pt-8">
               <p className="font-sans text-sm leading-relaxed text-muted">
                 A longer note on the internal structure of the reciprocal scale
-                matrix. Figures 1–4 are live: choose a meeting in the matrix to
-                see its complementary pools and finished scales, then watch the
-                native frame become the unit step{" "}
-                <span className="text-ink">+1 / −1</span>.
+                matrix. Figures 1–8 follow the argument.
               </p>
             </footer>
           </main>
@@ -108,18 +105,19 @@ function Masthead() {
         A research note
       </p>
       <h1 className="mt-4 font-serif text-[2.15rem] leading-[1.12] font-medium tracking-tight text-ink sm:text-5xl sm:leading-[1.08]">
-        Native Bases, Reciprocal Unit Steps, and the Approaches That Failed
+        Native Bases, Reciprocal Unit Steps, and the Structure of the
+        Reciprocal Scale Matrix
       </h1>
       <p className="mt-5 max-w-xl font-serif text-lg leading-snug text-muted italic sm:text-xl">
-        A longer note on the internal structure of the reciprocal scale matrix
-        and the paths that did not lead here.
+        A note on the internal structure of the reciprocal scale matrix and
+        the constructions that revealed it.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-1 font-sans text-sm text-muted">
         <span>Reciprocal Scale Notes</span>
         <span className="text-faint" aria-hidden>
           ·
         </span>
-        <span>§ Native frames</span>
+        <span>§ The progression</span>
       </div>
       <hr className="running-rule mt-8" />
     </header>

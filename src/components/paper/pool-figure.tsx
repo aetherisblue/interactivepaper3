@@ -8,7 +8,7 @@ export function PoolFigure({ m, n }: { m: number; n: number }) {
 
   return (
     <FigureFrame
-      n="2"
+      n="3"
       caption={
         <>
           Complementary energy pools for the selected meeting{" "}

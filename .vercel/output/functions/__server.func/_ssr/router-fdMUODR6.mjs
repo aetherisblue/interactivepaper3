@@ -4,8 +4,8 @@ import { _ as useRouter, f as createRouter, g as createRootRoute, h as createFil
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-Bafvmvy6.js
-var router_Bafvmvy6_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-fdMUODR6.js
+var router_fdMUODR6_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function AppErrorComponent({ error }) {
@@ -274,7 +274,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-BdCd4AkE.css";
+var styles_default = "/assets/styles-BalSgEPO.css";
 var APP_NAME = "Native Bases";
 var Route$1 = createRootRoute({
 	head: () => ({
@@ -338,7 +338,7 @@ var Route$1 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter = () => import("./routes-l0lDWq5W.mjs");
+var $$splitComponentImporter = () => import("./routes-Bvjd686v.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter, "component") }).update({
 	id: "/",
 	path: "/",
@@ -352,4 +352,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_Bafvmvy6_exports as t };
+export { getRouter, router_fdMUODR6_exports as t };

@@ -29,9 +29,8 @@ export function MatrixFigure({
           The finished meeting matrix{" "}
           <Tex i>{String.raw`R(m,n)=n^{n}/m^{m}`}</Tex> up to rank {rank}. The
           diagonal is identically 1. Off-diagonal partners multiply to 1. Tap a
-          cell to inspect its pools in Figure 2, its finished scales in Figure
-          3, and its native frame in Figure 4; its reciprocal partner is
-          outlined.
+          cell to carry that meeting through the figures that follow; its
+          reciprocal partner is outlined.
         </>
       }
     >

@@ -3,6 +3,22 @@ export function meeting(m: number, n: number): number {
   return n ** n / m ** m;
 }
 
+/** Finished scale a_k = k^k. */
+export function scale(k: number): number {
+  return k ** k;
+}
+
+/** Scalar potential s_k = k ln k. L(m,n) = s_n − s_m = ln R(m,n). */
+export function potential(k: number): number {
+  if (k <= 0) return Number.NaN;
+  if (k === 1) return 0;
+  return k * Math.log(k);
+}
+
+export function displacement(m: number, n: number): number {
+  return potential(n) - potential(m);
+}
+
 export function logBase(x: number, base: number): number {
   return Math.log(x) / Math.log(base);
 }
