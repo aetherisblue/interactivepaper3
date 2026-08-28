@@ -667,31 +667,301 @@ export function Article({
       <section id="s11" className="scroll-mt-24">
         <SectionHead n="11" title="The logarithmic potential" />
         <p>
-          Define <Tex i>{String.raw`L(m,n)=\ln R(m,n)`}</Tex>. Since{" "}
-          <Tex i>{String.raw`R(m,n)=a_n/a_m`}</Tex>,
+          Section 8 showed that distinct meetings compose by cancellation.
+          The product of ratios is exact, but it is still a product. The
+          logarithm is the unique change of register that turns that product
+          into a sum, and the sum then forces a single number to be attached
+          to each rank. That number is the potential. It is the additive
+          form of the whole matrix, not a new object sitting beside it.
         </p>
-        <Tex numbered="15">{String.raw`L(m,n)=\ln a_n-\ln a_m.`}</Tex>
+
+        <SubHead id="s111" n="11.1" title="Why a logarithm" />
         <p>
-          But <Tex i>{String.raw`a_k=k^{k}`}</Tex>, so{" "}
-          <Tex i>{String.raw`\ln(k^{k})=k\ln k`}</Tex>. Define
+          Up to this point the matrix has been described multiplicatively. A
+          meeting is a ratio <Tex i>{String.raw`R(m,n)`}</Tex>, and
+          successive meetings compose by multiplication:
         </p>
-        <Tex numbered="16">{String.raw`s_k=k\ln k.`}</Tex>
+        <Tex>{String.raw`R(m,n)\,R(n,p)=R(m,p).`}</Tex>
         <p>
-          Then
+          The next question is whether the same relation can be read as a
+          sum of steps rather than a product of ratios. The map{" "}
+          <Tex i>{String.raw`\log:\mathbb{R}_{>0}\to\mathbb{R}`}</Tex> is a
+          group isomorphism from multiplication to addition. That is the
+          entire reason for taking it. The identity that matters is
+        </p>
+        <Tex>{String.raw`\ln(xy)=\ln x+\ln y.`}</Tex>
+        <p>
+          Feed in the two-step product of §8:
+        </p>
+        <Tex>{String.raw`\ln\bigl(R(m,n)\,R(n,p)\bigr)=\ln R(m,n)+\ln R(n,p).`}</Tex>
+        <p>
+          The left side is <Tex i>{String.raw`\ln R(m,p)`}</Tex>, because the
+          product <em>is</em> the direct meeting. Define
+        </p>
+        <Tex numbered="15">{String.raw`L(m,n)=\ln R(m,n).`}</Tex>
+        <p>
+          Then the right side is{" "}
+          <Tex i>{String.raw`L(m,n)+L(n,p)`}</Tex>, and cancellation of a
+          ratio becomes addition of two numbers:
+        </p>
+        <Tex>{String.raw`L(m,n)+L(n,p)=L(m,p).`}</Tex>
+        <p>
+          In the multiplicative register, the intermediate scale cancels as
+          a factor. In the logarithmic register, the same intermediate
+          quantity cancels as a term in a sum. Without the logarithm,
+          composition is still true and still multiplicative. With it, the
+          waypoint is no longer something that appears above and below a
+          bar. It is a term that is added and then subtracted.
+        </p>
+        <p>
+          For the running pair, <Tex i>{String.raw`R(2,4)=64`}</Tex>, so
+        </p>
+        <Tex>{String.raw`L(2,4)=\ln 64=6\ln 2\approx 4.159.`}</Tex>
+        <p>
+          The number <Tex i>{String.raw`6\ln 2`}</Tex> is not a new quantity
+          added to the matrix. It is the existing meeting, read as a length.
+        </p>
+        <p>
+          That is why the logarithm is taken <em>now</em>, and not in §4.
+          Native bases already used a logarithm, but a local one: base{" "}
+          <Tex i>r</Tex>, attached to one pair, answering the unit question
+          for that pair. A native logarithm asks: how many units of this
+          meeting are we? The logarithm in (15) is a global one. It does
+          not choose a meeting as unit. It converts every meeting at once,
+          so that the composition law can be read as ordinary addition of
+          directed lengths. It asks: what additive displacement does this
+          meeting represent, on a line that every other meeting also lives
+          on? The first is a local choice of unit — a chart. The second is
+          a common coordinate system. Those lengths will turn out, in
+          §11.2, to be differences of one function of rank. The logarithm
+          is what makes that next step visible.
+        </p>
+        <p>
+          For the running pair the two jobs are visible at once. Base 64
+          says <Tex i>{String.raw`\log_{64}64=+1`}</Tex>: the meeting is one
+          copy of itself. The global logarithm says{" "}
+          <Tex i>{String.raw`\ln 64=6\ln 2`}</Tex>: the same meeting is a
+          definite length. Confusing the chart with the coordinate is how
+          native bases get mistaken for a dynamics.
+        </p>
+        <p>
+          The choice of natural log rather than{" "}
+          <Tex i>{String.raw`\log_2`}</Tex> or{" "}
+          <Tex i>{String.raw`\log_{10}`}</Tex> is a choice of unit on that
+          line, not a choice of structure. Any two logarithms differ by a
+          constant factor,
+        </p>
+        <Tex>{String.raw`\log_b x=\dfrac{\ln x}{\ln b}.`}</Tex>
+        <p>
+          So if <Tex i>{String.raw`L(m,n)`}</Tex> is written in natural log
+          and <Tex i>{String.raw`L^{(b)}(m,n)=\log_b R(m,n)`}</Tex> is the
+          same meeting in another base, then
+        </p>
+        <Tex>{String.raw`L^{(b)}(m,n)=\dfrac{L(m,n)}{\ln b}.`}</Tex>
+        <p>
+          Every length on the line is multiplied by the same constant{" "}
+          <Tex i>{String.raw`1/\ln b`}</Tex>. For the running meeting that
+          is visible at once:
+        </p>
+        <Tex>{String.raw`\ln 64=6\ln 2,\qquad \log_2 64=6,\qquad \log_{10}64=\dfrac{6\ln 2}{\ln 10}\approx 1.806.`}</Tex>
+        <p>
+          These are not three different facts about 64. They are one
+          displacement, measured in three units. Changing the unit does not
+          change cancellation. If every term is scaled by <Tex i>c</Tex>,
+          then
+        </p>
+        <Tex>{String.raw`c\,L(m,n)+c\,L(n,p)=c\,L(m,p)`}</Tex>
+        <p>
+          is the same identity as{" "}
+          <Tex i>{String.raw`L(m,n)+L(n,p)=L(m,p)`}</Tex>. The waypoint
+          still cancels. A potential still exists: it is merely{" "}
+          <Tex i>{String.raw`s_k^{(b)}=\log_b a_k=s_k/\ln b`}</Tex>, and
+          differences of <Tex i>{String.raw`s^{(b)}`}</Tex> still recover
+          the meetings. What is structural is that meetings become
+          differences of a function of one rank. What is conventional is
+          which positive number is called “one” on that line. Natural log
+          is used from here on only because it makes{" "}
+          <Tex i>{String.raw`s_k=k\ln k`}</Tex> tidy, not because base{" "}
+          <Tex i>e</Tex> is latent in the matrix.
+        </p>
+        <p>
+          What would <em>not</em> survive is refusing the logarithm
+          altogether. The ratios would still be there:{" "}
+          <Tex i>{String.raw`R(2,4)=64`}</Tex>,{" "}
+          <Tex i>{String.raw`R(2,4)\,R(4,6)=R(2,6)`}</Tex>, loops still
+          multiply to 1. But there would be no height attached to a rank,
+          and therefore no directed length attached to a meeting. A path
+          would remain a product of cells, not a sum of steps. Native bases
+          could still read one pair as <Tex i>{String.raw`+1,-1`}</Tex>.
+          They could not place that pair on a common line with the others.
+          The logarithm is what turns a consistent family of ratios into a
+          geometry of heights. Keep the ratios and drop the logarithm, and
+          that geometry never appears.
+        </p>
+        <p>
+          Once the matrix is in this additive register, the next question
+          is the one §11.2 answers: can every meeting be written as the
+          difference of two numbers attached separately to its two ranks?
+        </p>
+
+        <SubHead id="s112" n="11.2" title="From finished scale to height" />
+        <p>
+          The logarithm in §11.1 turned the multiplicative composition law
+          into addition. We can now ask what each logarithmic meeting is
+          actually adding. Start with the definition of the meeting,{" "}
+          <Tex i>{String.raw`R(m,n)=a_n/a_m`}</Tex>. Taking the logarithm
+          gives
+        </p>
+        <Tex>{String.raw`L(m,n)=\ln R(m,n)=\ln\Bigl(\dfrac{a_n}{a_m}\Bigr)=\ln a_n-\ln a_m.`}</Tex>
+        <p>
+          This is the important step. A meeting that originally looked like
+          a comparison of two scales is now a difference between two
+          quantities, one belonging to rank <Tex i>n</Tex> and one belonging
+          to rank <Tex i>m</Tex>. Define that quantity for each rank by
+        </p>
+        <Tex>{String.raw`s_k=\ln a_k.`}</Tex>
+        <p>
+          Then every meeting becomes
         </p>
         <Tex numbered="17">{String.raw`L(m,n)=s_n-s_m.`}</Tex>
         <p>
-          This is the additive form of the entire matrix. Every logarithmic
-          meeting is simply a difference between two scalar potentials. The
-          composition law now becomes
+          For the finished scales used here,{" "}
+          <Tex i>{String.raw`a_k=k^{k}`}</Tex>, so
         </p>
-        <Tex>{String.raw`(s_n-s_m)+(s_p-s_n)=s_p-s_m=L(m,p).`}</Tex>
+        <Tex numbered="16">{String.raw`s_k=\ln(k^{k})=k\ln k.`}</Tex>
         <p>
-          The same middle-point cancellation has appeared again, but now in
-          additive form. This is not a second structure. It is the same
-          structure after taking logarithms.
+          The word potential is useful because <Tex i>{String.raw`s_k`}</Tex>{" "}
+          is a number attached to one rank, while{" "}
+          <Tex i>{String.raw`L(m,n)`}</Tex> is the difference between two
+          such numbers. The matrix of pairwise meetings can be generated
+          from a single list of heights{" "}
+          <Tex i>{String.raw`s_1,s_2,s_3,\ldots`}</Tex>. The meeting between
+          two ranks is simply the directed displacement between their
+          heights.
+        </p>
+        <p>
+          This also makes transitivity almost unavoidable. For three ranks,
+        </p>
+        <Tex>{String.raw`L(m,n)+L(n,p)=(s_n-s_m)+(s_p-s_n)=s_p-s_m=L(m,p).`}</Tex>
+        <p>
+          The middle height cancels. So the additive composition law is not
+          another rule imposed on the matrix. It is what necessarily happens
+          when every meeting is a difference of two rank potentials.
+        </p>
+        <p>
+          The running example makes this concrete. Since{" "}
+          <Tex i>{String.raw`a_2=2^{2}=4`}</Tex> and{" "}
+          <Tex i>{String.raw`a_4=4^{4}=256`}</Tex>, their heights are{" "}
+          <Tex i>{String.raw`s_2=\ln 4`}</Tex> and{" "}
+          <Tex i>{String.raw`s_4=\ln 256`}</Tex>. Therefore
+        </p>
+        <Tex>{String.raw`L(2,4)=s_4-s_2=\ln 256-\ln 4=\ln 64.`}</Tex>
+        <p>
+          The original meeting was <Tex i>{String.raw`R(2,4)=64`}</Tex>. The
+          logarithmic description says that the same meeting is the
+          displacement from the height of rank 2 to the height of rank 4.
+          Nothing new has been added. The ratio has simply been decomposed
+          into two endpoint quantities.
+        </p>
+        <p>
+          This is the point at which the matrix stops looking like a
+          collection of pairwise numbers. Each cell can be generated from
+          the same one-dimensional set of rank heights. The matrix records
+          differences between those heights. Adding a constant to every{" "}
+          <Tex i>s_k</Tex> does not change the differences, so the zero of
+          the potential is a choice of origin, not a fact about rank. Rank
+          1 happens to sit at the origin because{" "}
+          <Tex i>{String.raw`s_1=1\ln 1=0`}</Tex>, but that is a convenience
+          of the formula, not a meaning assigned to rank 1.
+        </p>
+
+        <SubHead id="s113" n="11.3" title="The running values" />
+        <p>
+          The same heights can be written exactly in{" "}
+          <Tex i>{String.raw`\ln 2`}</Tex>. Rank 2 is still the scale{" "}
+          <Tex i>{String.raw`2^{2}=4`}</Tex>, so{" "}
+          <Tex i>{String.raw`s_2=\ln 4=2\ln 2`}</Tex>. Rank 4 has{" "}
+          <Tex i>{String.raw`a_4=256=2^{8}`}</Tex>, so{" "}
+          <Tex i>{String.raw`s_4=\ln 256=8\ln 2`}</Tex>. The displacement is
+        </p>
+        <Tex>{String.raw`L(2,4)=s_4-s_2=8\ln 2-2\ln 2=6\ln 2=\ln(2^{6})=\ln 64.`}</Tex>
+        <p>
+          This is the same 64 as in (3). The logarithm has not produced a
+          new number; it has named 64 as a displacement of{" "}
+          <Tex i>{String.raw`6\ln 2`}</Tex> on the additive line. In the
+          native base of the meeting, that displacement is one unit:
+        </p>
+        <Tex>{String.raw`\log_{64}64=\dfrac{L(2,4)}{\ln 64}=\dfrac{6\ln 2}{6\ln 2}=+1.`}</Tex>
+        <p>
+          In the native base of the rank-2 scale it is three units, because{" "}
+          <Tex i>{String.raw`\ln 4=2\ln 2`}</Tex> and{" "}
+          <Tex i>{String.raw`(6\ln 2)/(2\ln 2)=3`}</Tex>. The two charts of
+          §6 are two ways of measuring the same displacement{" "}
+          <Tex i>{String.raw`s_4-s_2`}</Tex>.
         </p>
         <PotentialFigure m={selected.m} n={selected.n} />
+
+        <SubHead id="s114" n="11.4" title="Telescoping is cancellation" />
+        <p>
+          Write the detour of §8 additively. The waypoint is rank 6, with
+        </p>
+        <Tex>{String.raw`s_6=6\ln 6.`}</Tex>
+        <p>
+          The two legs are
+        </p>
+        <Tex>{String.raw`L(2,6)=s_6-s_2,\qquad L(6,4)=s_4-s_6.`}</Tex>
+        <p>
+          Adding them,
+        </p>
+        <Tex>{String.raw`(s_6-s_2)+(s_4-s_6)=s_4-s_2=L(2,4).`}</Tex>
+        <p>
+          The waypoint height cancels. This is (12) after taking logarithms:
+          the same middle term, once plus and once minus, instead of once
+          in the numerator and once in the denominator. Nothing is
+          approximated. Exponentiating both sides recovers{" "}
+          <Tex i>{String.raw`R(2,6)\,R(6,4)=R(2,4)`}</Tex>. The two
+          registers are doing the same work.
+        </p>
+        <p>
+          A long path is a telescoping sum. For ranks{" "}
+          <Tex i>{String.raw`i_0,i_1,\ldots,i_k`}</Tex>,
+        </p>
+        <Tex>{String.raw`L(i_0,i_1)+L(i_1,i_2)+\cdots+L(i_{k-1},i_k)=s_{i_k}-s_{i_0}=L(i_0,i_k),`}</Tex>
+        <p>
+          which is the logarithm of (14). A closed path has{" "}
+          <Tex i>{String.raw`i_k=i_0`}</Tex>, so the sum of displacements is
+          zero, and the product of meetings is 1. Consistency of loops is
+          the statement that you have returned to the same height.
+        </p>
+
+        <SubHead id="s115" n="11.5" title="The converse" />
+        <p>
+          Existence of a potential is not extra to transitivity. It is
+          equivalent to it. If a real matrix{" "}
+          <Tex i>{String.raw`L(m,n)`}</Tex> satisfies
+        </p>
+        <Tex>{String.raw`L(m,n)+L(n,p)=L(m,p)`}</Tex>
+        <p>
+          for every triple, then the assignment{" "}
+          <Tex i>{String.raw`s_k=L(1,k)`}</Tex> — or{" "}
+          <Tex i>{String.raw`s_k=L(k_0,k)`}</Tex> for any fixed origin{" "}
+          <Tex i>{String.raw`k_0`}</Tex> — recovers{" "}
+          <Tex i>{String.raw`L(m,n)=s_n-s_m`}</Tex>. The potential is unique
+          up to an additive constant. Conversely, every difference of a
+          rank function is transitive. Exponentiating, a positive matrix
+          is a ratio matrix{" "}
+          <Tex i>{String.raw`R(m,n)=a_n/a_m`}</Tex> if and only if it is
+          transitive, with <Tex i>{String.raw`a_k=e^{s_k}`}</Tex>.
+        </p>
+        <p>
+          That is the precise sense in which the potential is the central
+          additive object. Section 8 said the matrix is one family of
+          scales, not a bag of pairs. Section 11 says the same thing as
+          heights: the matrix is one function of rank, and a meeting is a
+          difference. Native bases remain available as local units in
+          which to read one such difference. They are charts on the
+          potential, not a second source of structure.
+        </p>
       </section>
 
       <section id="s12" className="scroll-mt-24">
